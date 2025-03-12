@@ -41,7 +41,7 @@ const Header = () => {
           >
             <span className="navbar-toggler-icon"></span>
           </button>
-          <div className="collapse navbar-collapse " id="navbarNav">
+          <div className="collapse navbar-collapse nav-right" id="navbarNav">
             <ul className="navbar-nav ms-auto text-center d-flex align-items-center">
               <div className="d-flex gap-3">
                 <li className="nav-item">

@@ -1,9 +1,27 @@
-import React from "react";
+import { useContext } from "react";
+import { BasketContext } from "../../context/BasketContext";
+import BasketItem from "../../components/BasketItem";
+import BasketInfo from "../../components/BasketInfo";
+import Total from "../../components/Total";
 
 const Basket = () => {
+  const { basket } = useContext(BasketContext);
+
   return (
-    <div>
-      <h1>basket</h1>
+    <div className="container mt-5">
+      <h1>sepet</h1>
+      <div className="row">
+        <div className="col-lg-8">
+          {basket.length === 0 ? (
+            <BasketInfo />
+          ) : (
+            basket.map((item) => <BasketItem key={item.id} item={item} />)
+          )}
+        </div>
+        <div className="col-lg-4">
+          <Total />
+        </div>
+      </div>
     </div>
   );
 };
